@@ -91,56 +91,90 @@ function animateBMCCard(card) {
 }
 
 function setupBMCHoverEffects(card) {
-    // Magnetic effect on mouse move
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+    // Check if mobile device
+    const isMobile = window.innerWidth <= 768;
 
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
+    if (!isMobile) {
+        // Magnetic effect on mouse move (desktop only)
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-        const rotateX = (y - centerY) / 15;
-        const rotateY = (centerX - x) / 15;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-    });
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
 
-    // Reset on mouse leave
-    card.addEventListener('mouseleave', () => {
-        if (card.classList.contains('animate')) {
-            card.style.transform = 'translateY(0) scale(1)';
-        } else {
-            card.style.transform = 'translateY(50px)';
-        }
-    });
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
 
-    // Glow effect on hover
-    card.addEventListener('mouseenter', () => {
-        const icon = card.querySelector('.bmc-icon');
-        if (icon) {
-            icon.style.boxShadow = '0 0 30px rgba(168, 85, 255, 0.6)';
-            icon.style.transform = 'scale(1.1) rotate(5deg)';
-        }
+        // Reset on mouse leave (desktop only)
+        card.addEventListener('mouseleave', () => {
+            if (card.classList.contains('animate')) {
+                card.style.transform = 'translateY(0) scale(1)';
+            } else {
+                card.style.transform = 'translateY(50px)';
+            }
+        });
 
-        const iconSvg = card.querySelector('.bmc-icon svg');
-        if (iconSvg) {
-            iconSvg.style.animation = 'pulse 1s ease-in-out infinite';
-        }
-    });
+        // Glow effect on hover (desktop)
+        card.addEventListener('mouseenter', () => {
+            const icon = card.querySelector('.bmc-icon');
+            if (icon) {
+                icon.style.boxShadow = '0 0 30px rgba(168, 85, 255, 0.6)';
+                icon.style.transform = 'scale(1.1) rotate(5deg)';
+            }
 
-    card.addEventListener('mouseleave', () => {
-        const icon = card.querySelector('.bmc-icon');
-        if (icon) {
-            icon.style.boxShadow = '';
-            icon.style.transform = '';
-        }
+            const iconSvg = card.querySelector('.bmc-icon svg');
+            if (iconSvg) {
+                iconSvg.style.animation = 'pulse 1s ease-in-out infinite';
+            }
+        });
 
-        const iconSvg = card.querySelector('.bmc-icon svg');
-        if (iconSvg) {
-            iconSvg.style.animation = '';
-        }
-    });
+        card.addEventListener('mouseleave', () => {
+            const icon = card.querySelector('.bmc-icon');
+            if (icon) {
+                icon.style.boxShadow = '';
+                icon.style.transform = '';
+            }
+
+            const iconSvg = card.querySelector('.bmc-icon svg');
+            if (iconSvg) {
+                iconSvg.style.animation = '';
+            }
+        });
+    } else {
+        // Touch effects for mobile
+        card.addEventListener('touchstart', (e) => {
+            const icon = card.querySelector('.bmc-icon');
+            if (icon) {
+                icon.style.boxShadow = '0 0 25px rgba(168, 85, 255, 0.5)';
+                icon.style.transform = 'scale(1.05) rotate(3deg)';
+                icon.style.transition = 'all 0.3s ease';
+            }
+
+            // Subtle scale animation on touch
+            card.style.transform = 'translateY(0) scale(1.02)';
+            card.style.transition = 'transform 0.2s ease';
+        }, { passive: true });
+
+        card.addEventListener('touchend', (e) => {
+            const icon = card.querySelector('.bmc-icon');
+            if (icon) {
+                icon.style.boxShadow = '';
+                icon.style.transform = '';
+            }
+
+            // Reset scale animation
+            if (card.classList.contains('animate')) {
+                card.style.transform = 'translateY(0) scale(1)';
+            } else {
+                card.style.transform = 'translateY(50px)';
+            }
+        }, { passive: true });
+    }
 }
 
 function setupBMCInteractions(card) {

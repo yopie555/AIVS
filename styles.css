@@ -1540,7 +1540,191 @@ section {
     }
 }
 
+/* Tablet and Mobile Navigation */
 @media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(5, 5, 9, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        gap: 1.5rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: rgba(168, 85, 255, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .nav-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Hero Section Mobile */
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3.5rem) !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.5rem) !important;
+    }
+
+    .hero-description {
+        font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
+        max-width: 100% !important;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Section Spacing */
+    .section {
+        padding: 4rem 0 !important;
+    }
+
+    .container {
+        padding: 0 1rem !important;
+    }
+
+    /* Typography */
+    .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .section-description {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        max-width: 100%;
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-visual {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem 0;
+        max-width: 100%;
+    }
+
+    .floating-card {
+        max-width: 100%;
+        height: 140px;
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Services */
+    .service-cards {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .service-card {
+        padding: 2rem !important;
+        min-height: auto !important;
+    }
+
+    /* Technology Stack */
+    .tech-categories {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 2rem !important;
+    }
+
+    .tech-category {
+        padding: 1.5rem !important;
+    }
+
+    /* Timeline */
+    .timeline-item {
+        padding: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Team */
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 2rem !important;
+    }
+
+    /* Contact */
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+    .contact-form {
+        padding: 2rem !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px !important; /* Prevent zoom on iOS */
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    }
+
+    /* BMC Section */
     .bmc-section {
         padding: 4rem 0;
     }
@@ -1572,9 +1756,248 @@ section {
     .bmc-list li {
         font-size: 0.9rem;
     }
+
+    /* Export Button Mobile */
+    .btn-export {
+        width: 100%;
+        max-width: 300px;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
+    /* Container Padding */
+    .container {
+        padding: 0 0.8rem !important;
+    }
+
+    /* Navigation */
+    .nav-container {
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-logo .logo-text {
+        font-size: 1.3rem;
+    }
+
+    /* Hero Section Small Mobile */
+    .hero-section {
+        min-height: 90vh;
+        padding: 2rem 0;
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 10vw, 3rem) !important;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 5vw, 1.3rem) !important;
+    }
+
+    .hero-description {
+        font-size: clamp(0.85rem, 4vw, 1rem) !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .hero-buttons {
+        max-width: 280px;
+    }
+
+    .btn {
+        padding: 0.9rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Section Spacing Small Mobile */
+    .section {
+        padding: 3rem 0 !important;
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 8vw, 2.2rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .section-description {
+        font-size: clamp(0.85rem, 4vw, 1rem);
+        margin-bottom: 2rem;
+    }
+
+    /* About Section Small Mobile */
+    .about-content {
+        gap: 2rem;
+    }
+
+    .about-visual {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .floating-card {
+        height: 110px;
+        padding: 1rem;
+    }
+
+    .floating-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    /* Services Small Mobile */
+    .service-card {
+        padding: 1.5rem !important;
+    }
+
+    .service-icon {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .service-card p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Technology Small Mobile */
+    .tech-categories {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .tech-category {
+        padding: 1.2rem !important;
+    }
+
+    .tech-category h3 {
+        font-size: 1rem !important;
+    }
+
+    .tech-item {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 0.8rem !important;
+    }
+
+    /* Timeline Small Mobile */
+    .timeline-item {
+        padding: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .timeline-date {
+        font-size: 0.9rem !important;
+    }
+
+    .timeline-title {
+        font-size: 1.1rem !important;
+    }
+
+    .timeline-description {
+        font-size: 0.9rem !important;
+    }
+
+    /* Team Small Mobile */
+    .team-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .team-member {
+        padding: 1.5rem !important;
+        text-align: center;
+    }
+
+    .team-avatar {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto 1rem !important;
+    }
+
+    .team-info h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .team-info p {
+        font-size: 0.9rem !important;
+    }
+
+    .team-socials a {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Contact Small Mobile */
+    .contact-content {
+        gap: 2rem !important;
+    }
+
+    .contact-form {
+        padding: 1.5rem !important;
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem !important;
+        font-size: 16px !important; /* Prevent zoom on iOS */
+    }
+
+    .form-group label {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .contact-item {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .contact-item h3 {
+        font-size: 1rem !important;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Footer Small Mobile */
+    .footer-content {
+        gap: 1.5rem !important;
+    }
+
+    .footer-logo p {
+        font-size: 0.9rem !important;
+    }
+
+    .footer-links {
+        gap: 1.5rem !important;
+    }
+
+    .footer-section h4 {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+
+    .footer-section a {
+        font-size: 0.85rem !important;
+        padding: 0.4rem 0 !important;
+    }
+
+    /* BMC Section Small Mobile */
     .bmc-section {
         padding: 3rem 0;
     }
@@ -1602,6 +2025,149 @@ section {
     .bmc-list li {
         font-size: 0.85rem;
         padding-left: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .bmc-list li::before {
+        left: 0.3rem;
+        top: 0.6rem;
+    }
+
+    /* Export Button Small Mobile */
+    .btn-export {
+        max-width: 260px;
+        padding: 0.9rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Loading Screen Small Mobile */
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loading-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Improvements for touch */
+    .btn,
+    .nav-link,
+    .service-card,
+    .team-member,
+    .bmc-card,
+    .tech-item,
+    .contact-item {
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(168, 85, 255, 0.2);
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+      /* Better scrolling on iOS */
+    .nav-menu {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Special mobile improvements */
+    .section {
+        scroll-margin-top: 70px; /* Account for fixed header */
+    }
+
+    /* Make sure videos and embeds are responsive */
+    embed, iframe, object, video {
+        max-width: 100%;
+    }
+
+    /* Improve tap targets for mobile */
+    .btn, .nav-link, .tech-item {
+        min-height: 44px; /* iOS recommended minimum */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Better form inputs for mobile */
+    input, textarea, select {
+        -webkit-appearance: none;
+        border-radius: 8px;
+    }
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 1rem 0;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+    }
+
+    .section {
+        padding: 2rem 0 !important;
+    }
+
+    .bmc-card {
+        min-height: 180px !important;
+    }
+
+    .nav-menu {
+        height: calc(100vh - 60px);
+        top: 60px;
+    }
+}
+
+/* Ultra small mobile (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 0.6rem !important;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 12vw, 2.5rem) !important;
+    }
+
+    .btn {
+        padding: 0.8rem 1.2rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .service-card,
+    .team-member,
+    .bmc-card {
+        padding: 1rem !important;
+    }
+
+    .floating-card {
+        height: 100px !important;
+        padding: 0.8rem !important;
+    }
+
+    .card-icon {
+        font-size: 1.8rem !important;
+    }
+
+    .floating-card h4 {
+        font-size: 0.85rem !important;
     }
 }
 
