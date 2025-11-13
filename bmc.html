@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Model Canvas - AI Video Storyteller</title>
+    <meta name="description" content="Complete Business Model Canvas for AI Video Storyteller - Strategic framework for automated content creation ecosystem">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jsPDF Library -->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading Business Model Canvas...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="logo-text">AI<span class="logo-accent">VS</span></span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">BUSINESS MODEL</span>
+                <span class="title-accent">CANVAS</span>
+            </h1>
+            <p class="hero-subtitle">AI Video Storyteller Strategic Framework</p>
+            <p class="hero-description">Comprehensive business model for automated AI-powered content creation ecosystem</p>
+            <div class="hero-buttons">
+                <a href="index.html" class="btn btn-primary">
+                    <span>← Back to Home</span>
+                </a>
+                <a href="#bmc-section" class="btn btn-secondary">
+                    <span>Explore BMC</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 14l5-5 5 5z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Canvas Section -->
+    <section id="bmc-section" class="bmc-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Business Model Canvas</h2>
+                <div class="section-line"></div>
+                <p class="section-description">Strategic framework for AI Video Storyteller's automated content creation ecosystem</p>
+                <button id="exportPDF" class="btn btn-export">
+                    <span>Export as PDF</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="bmc-grid">
+                <!-- Key Partners -->
+                <div class="bmc-card bmc-card-partners">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="8.5" cy="7" r="4"/>
+                                <path d="M20 8v6M23 11h-6"/>
+                            </svg>
+                        </div>
+                        <h3>Key Partners</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>Platform AI (ChatGPT, Claude, Gemini)</li>
+                        <li>n8n workflow automation system</li>
+                        <li>Media platforms (YouTube Shorts, TikTok, Instagram)</li>
+                        <li>Digital content sponsors & advertisers</li>
+                    </ul>
+                </div>
+
+                <!-- Key Activities -->
+                <div class="bmc-card bmc-card-activities">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                            </svg>
+                        </div>
+                        <h3>Key Activities</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>Automated workflow design for story production</li>
+                        <li>AI integration for plot & dialogue generation</li>
+                        <li>Scheduled social media publishing</li>
+                        <li>Performance optimization based on engagement</li>
+                    </ul>
+                </div>
+
+                <!-- Value Proposition -->
+                <div class="bmc-card bmc-card-value">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                        <h3>Value Proposition</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>Zero-capital business model powered by AI & creativity</li>
+                        <li>Automated series production with high consistency</li>
+                        <li>Scalable across multiple story genres (fantasy, drama, education)</li>
+                    </ul>
+                </div>
+
+                <!-- Customer Relationships -->
+                <div class="bmc-card bmc-card-relationships">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Customer Relationships</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>Audience engagement via comments & polling</li>
+                        <li>Consistent upload schedule for viewer loyalty</li>
+                        <li>Collaboration with sponsors & fellow creators</li>
+                    </ul>
+                </div>
+
+                <!-- Customer Segments -->
+                <div class="bmc-card bmc-card-segments">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Customer Segments</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>Young audiences (8-18 years old)</li>
+                        <li>Digital storytelling & fantasy enthusiasts</li>
+                        <li>Brands & sponsors targeting young demographics</li>
+                    </ul>
+                </div>
+
+                <!-- Key Resources -->
+                <div class="bmc-card bmc-card-resources">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Key Resources</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>AI text models for narrative generation</li>
+                        <li>Automation systems & social media accounts</li>
+                        <li>Story templates & creative prompts</li>
+                        <li>Small creative team for curation & monitoring</li>
+                    </ul>
+                </div>
+
+                <!-- Channels -->
+                <div class="bmc-card bmc-card-channels">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Channels</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>YouTube Shorts, TikTok, Instagram Reels</li>
+                        <li>Storytelling & AI creative communities</li>
+                        <li>Portfolio website & official social media</li>
+                    </ul>
+                </div>
+
+                <!-- Cost Structure -->
+                <div class="bmc-card bmc-card-costs">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Cost Structure</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>AI API costs (starting with free tier)</li>
+                        <li>Hosting & workflow automation</li>
+                        <li>Content promotion & creative team time</li>
+                    </ul>
+                </div>
+
+                <!-- Revenue Streams -->
+                <div class="bmc-card bmc-card-revenue">
+                    <div class="bmc-card-header">
+                        <div class="bmc-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="2" x2="12" y2="22"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Revenue Streams</h3>
+                    </div>
+                    <ul class="bmc-list">
+                        <li>YouTube AdSense & sponsorships</li>
+                        <li>Brand placement collaborations</li>
+                        <li>Popular story script licensing</li>
+                        <li>Merchandise & digital content bundles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span class="logo-text">AI<span class="logo-accent">VS</span></span>
+                        <p>Where AI Creates Infinite Stories</p>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <a href="index.html#home">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Business</h4>
+                        <a href="#bmc-section">Business Model</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="index.html#technology">Technology</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Video Storyteller. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="bmc-script.js"></script>
+</body>
+</html>

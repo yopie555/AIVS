@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Storyteller - Automated AI Story Creation Platform</title>
+    <meta name="description" content="Revolutionary AI platform that creates and produces automated story series for YouTube Shorts, TikTok, and Instagram Reels.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Initializing AI Universe...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AI<span class="logo-accent">VS</span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">AI VIDEO</span>
+                <span class="title-accent">STORYTELLER</span>
+            </h1>
+            <p class="hero-subtitle">Automated AI Story Creation Platform</p>
+            <p class="hero-description">Where artificial intelligence crafts infinite narratives for the digital generation</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">
+                    <span>Get Started</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+                <button class="btn btn-secondary">
+                    <span>Watch Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <a href="bmc.html" class="btn btn-bmc">
+                    <span>Business Model</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About AI Video Storyteller</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Revolutionizing Digital Storytelling</h3>
+                    <p>In an era where content is king but attention spans are fleeting, AI Video Storyteller emerges as the revolutionary platform that bridges the gap between creativity and consistency.</p>
+                    <p>By harnessing the power of artificial intelligence, we transform storytelling from an art form limited by human constraints into an infinite universe of automated, engaging narratives that captivate audiences across digital platforms.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="1000000">0</span>
+                            <span class="stat-label">Stories Created</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="500000">0</span>
+                            <span class="stat-label">Active Users</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="99">0</span>
+                            <span class="stat-label">% Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">🎬</div>
+                        <h4>AI Generated</h4>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🚀</div>
+                        <h4>Automated</h4>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">📊</div>
+                        <h4>Data Driven</h4>
+                    </div>
+                    <div class="floating-card card-4">
+                        <div class="card-icon">⚡</div>
+                        <h4>Lightning Fast</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Core Services</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3>AI Story Generation</h3>
+                    <p>Automated script development with multi-episode story arcs, dynamic character development, and world-building capabilities.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                            <line x1="7" y1="2" x2="7" y2="22"/>
+                            <line x1="17" y1="2" x2="17" y2="22"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <line x1="2" y1="7" x2="7" y2="7"/>
+                            <line x1="2" y1="17" x2="7" y2="17"/>
+                            <line x1="17" y1="17" x2="22" y2="17"/>
+                            <line x1="17" y1="7" x2="22" y2="7"/>
+                        </svg>
+                    </div>
+                    <h3>Video Automation Pipeline</h3>
+                    <p>End-to-end automated video production with scene composition, visual consistency, and voice synthesis integration.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 7l-7 5 7 5V7z"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h3>Social Media Publishing</h3>
+                    <p>Scheduled posting across TikTok, YouTube Shorts, and Instagram Reels with platform-specific optimization.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time performance metrics, audience retention analysis, and predictive content optimization insights.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+                            <line x1="12" y1="2" x2="12" y2="12"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                    <h3>Brand Integration</h3>
+                    <p>Seamless brand placement within AI-generated narratives and custom story development for marketing campaigns.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Creator Ecosystem</h3>
+                    <p>Community building platform where AI-assisted creators can collaborate, share resources, and grow together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="technology" class="technology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technology Stack</h2>
+                <div class="section-line"></div>
+                <p class="section-description">Cutting-edge AI and cloud technologies powering our automated storytelling platform</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h4>AI Engines</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">OpenAI GPT-4</span>
+                        <span class="tech-item">Anthropic Claude</span>
+                        <span class="tech-item">Google Gemini</span>
+                        <span class="tech-item">Hugging Face</span>
+                    </div>
+                    <p class="tech-description">Advanced language models for story generation, character development, and dialogue creation</p>
+                </div>
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                            <line x1="7" y1="2" x2="7" y2="22"/>
+                            <line x1="17" y1="2" x2="17" y2="22"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <line x1="2" y1="7" x2="7" y2="7"/>
+                            <line x1="2" y1="17" x2="7" y2="17"/>
+                            <line x1="17" y1="17" x2="22" y2="17"/>
+                            <line x1="17" y1="7" x2="22" y2="7"/>
+                        </svg>
+                    </div>
+                    <h4>Video Generation</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">RunwayML</span>
+                        <span class="tech-item">Pika Labs</span>
+                        <span class="tech-item">Stable Diffusion</span>
+                        <span class="tech-item">Midjourney</span>
+                        <span class="tech-item">DALL-E 3</span>
+                    </div>
+                    <p class="tech-description">AI-powered video creation, scene generation, and visual content production</p>
+                </div>
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h4>Automation</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">n8n</span>
+                        <span class="tech-item">Zapier</span>
+                        <span class="tech-item">Make.com</span>
+                        <span class="tech-item">GitHub Actions</span>
+                    </div>
+                    <p class="tech-description">Workflow automation, content scheduling, and multi-platform publishing</p>
+                </div>
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 20V10M12 20V4M6 20v-6"/>
+                        </svg>
+                    </div>
+                    <h4>Analytics & Data</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">YouTube API</span>
+                        <span class="tech-item">TikTok Insights</span>
+                        <span class="tech-item">Looker Studio</span>
+                        <span class="tech-item">Google Analytics</span>
+                        <span class="tech-item">Mixpanel</span>
+                    </div>
+                    <p class="tech-description">Performance tracking, audience insights, and content optimization analytics</p>
+                </div>
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h4>Infrastructure</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">AWS Cloud</span>
+                        <span class="tech-item">Cloudflare CDN</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">Kubernetes</span>
+                    </div>
+                    <p class="tech-description">Scalable cloud infrastructure, database management, and container orchestration</p>
+                </div>
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h4>Frontend & UI</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">Three.js</span>
+                        <span class="tech-item">WebGL</span>
+                        <span class="tech-item">Framer Motion</span>
+                    </div>
+                    <p class="tech-description">Modern web frameworks, interactive 3D graphics, and smooth animations</p>
+                </div>
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h4>Backend & APIs</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">FastAPI</span>
+                        <span class="tech-item">GraphQL</span>
+                        <span class="tech-item">REST APIs</span>
+                    </div>
+                    <p class="tech-description">High-performance APIs, microservices architecture, and real-time processing</p>
+                </div>
+                <div class="tech-category">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Voice & Audio</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">ElevenLabs</span>
+                        <span class="tech-item">Murf.ai</span>
+                        <span class="tech-item">Coqui TTS</span>
+                        <span class="tech-item">OpenAI Whisper</span>
+                    </div>
+                    <p class="tech-description">AI voice synthesis, speech-to-text, and character voice generation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="roadmap-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">3-Year Roadmap</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Year 1: Foundation</h3>
+                        <ul>
+                            <li>Platform development and beta testing</li>
+                            <li>Launch first AI-generated story series</li>
+                            <li>Achieve 100K+ monthly active users</li>
+                            <li>Establish initial revenue streams</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Year 2: Expansion</h3>
+                        <ul>
+                            <li>Launch AI Character Studio</li>
+                            <li>Introduce multilingual support</li>
+                            <li>Advanced analytics and predictive tools</li>
+                            <li>Expand to international markets</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Year 3: Scale & Domination</h3>
+                        <ul>
+                            <li>Launch enterprise SaaS solutions</li>
+                            <li>IP licensing platform</li>
+                            <li>Mobile application development</li>
+                            <li>Achieve 10M+ monthly active users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Team</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">👨‍💻</div>
+                    </div>
+                    <h4>Founder & AI Engineer</h4>
+                    <p>Leads AI research and development initiatives, oversees technology roadmap and innovation strategy.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">🎨</div>
+                    </div>
+                    <h4>Creative Director</h4>
+                    <p>Shapes storytelling vision and content quality standards, develops creative guidelines and narrative frameworks.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">📊</div>
+                    </div>
+                    <h4>Content Strategist</h4>
+                    <p>Analyzes market trends and audience preferences, develops content calendars and series strategies.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">🤝</div>
+                    </div>
+                    <h4>Business Development</h4>
+                    <p>Builds partnerships with brands and agencies, develops revenue models and monetization strategies.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">💬</div>
+                    </div>
+                    <h4>Community Manager</h4>
+                    <p>Engages with creator community and user base, moderates content and ensures platform safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@aivideostoryteller.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Yogyakarta, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Social</h4>
+                            <div class="social-links">
+                                <a href="#">Twitter</a>
+                                <a href="#">LinkedIn</a>
+                                <a href="#">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">AI<span class="logo-accent">VS</span></span>
+                    <p>Where AI Creates Infinite Stories</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Product</h4>
+                        <a href="#services">Features</a>
+                        <a href="#technology">Technology</a>
+                        <a href="#roadmap">Roadmap</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#team">Team</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Video Storyteller. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

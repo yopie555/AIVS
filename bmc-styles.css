@@ -1,0 +1,414 @@
+/* Business Model Canvas Section Styles */
+
+/* Section Background & Layout */
+.bmc-section {
+    background: linear-gradient(135deg, #09090f 0%, #0d0d16 50%, #0a0a14 100%);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bmc-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(168, 85, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(79, 209, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(192, 132, 252, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bmc-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Header */
+.bmc-section .section-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #a855ff, #c084fc, #4fd1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.bmc-section .section-description {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    line-height: 1.6;
+}
+
+/* BMC Grid Layout */
+.bmc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* BMC Card Base Styles */
+.bmc-card {
+    background: rgba(13, 13, 22, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 85, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.bmc-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba(168, 85, 255, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.bmc-card:hover::before {
+    opacity: 1;
+}
+
+.bmc-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(168, 85, 255, 0.5);
+    box-shadow:
+        0 20px 40px rgba(168, 85, 255, 0.2),
+        0 0 30px rgba(168, 85, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Card Header */
+.bmc-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.bmc-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #a855ff, #c084fc);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bmc-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: rotate(45deg);
+    transition: transform 0.6s ease;
+}
+
+.bmc-card:hover .bmc-icon::before {
+    transform: rotate(45deg) translateY(100%);
+}
+
+.bmc-card h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Card List Styles */
+.bmc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.bmc-list li {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.bmc-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #a855ff;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.bmc-card:hover .bmc-list li::before {
+    transform: translateX(4px);
+    color: #4fd1ff;
+}
+
+.bmc-card:hover .bmc-list li {
+    color: #e2e8f0;
+}
+
+/* Individual Card Themes */
+.bmc-card-partners {
+    border-color: rgba(168, 85, 255, 0.3);
+}
+
+.bmc-card-partners .bmc-icon {
+    background: linear-gradient(135deg, #a855ff, #c084fc);
+}
+
+.bmc-card-activities {
+    border-color: rgba(79, 209, 255, 0.3);
+}
+
+.bmc-card-activities .bmc-icon {
+    background: linear-gradient(135deg, #38bdf8, #4fd1ff);
+}
+
+.bmc-card-value {
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.bmc-card-value .bmc-icon {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+}
+
+.bmc-card-relationships {
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.bmc-card-relationships .bmc-icon {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+}
+
+.bmc-card-segments {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.bmc-card-segments .bmc-icon {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+}
+
+.bmc-card-resources {
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.bmc-card-resources .bmc-icon {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+.bmc-card-channels {
+    border-color: rgba(236, 72, 153, 0.3);
+}
+
+.bmc-card-channels .bmc-icon {
+    background: linear-gradient(135deg, #ec4899, #f472b6);
+}
+
+.bmc-card-costs {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.bmc-card-costs .bmc-icon {
+    background: linear-gradient(135deg, #f97316, #fb923c);
+}
+
+.bmc-card-revenue {
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.bmc-card-revenue .bmc-icon {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+/* Animation Classes */
+.bmc-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bmc-card:nth-child(1).animate {
+    transition-delay: 0.1s;
+}
+
+.bmc-card:nth-child(2).animate {
+    transition-delay: 0.2s;
+}
+
+.bmc-card:nth-child(3).animate {
+    transition-delay: 0.3s;
+}
+
+.bmc-card:nth-child(4).animate {
+    transition-delay: 0.4s;
+}
+
+.bmc-card:nth-child(5).animate {
+    transition-delay: 0.5s;
+}
+
+.bmc-card:nth-child(6).animate {
+    transition-delay: 0.6s;
+}
+
+.bmc-card:nth-child(7).animate {
+    transition-delay: 0.7s;
+}
+
+.bmc-card:nth-child(8).animate {
+    transition-delay: 0.8s;
+}
+
+.bmc-card:nth-child(9).animate {
+    transition-delay: 0.9s;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .bmc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .bmc-card {
+        min-height: 250px;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bmc-section {
+        padding: 4rem 0;
+    }
+
+    .bmc-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .bmc-card {
+        min-height: 220px;
+        padding: 1.5rem;
+    }
+
+    .bmc-card-header {
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .bmc-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bmc-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .bmc-list li {
+        font-size: 0.9rem;
+    }
+
+    .bmc-section .section-description {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bmc-section {
+        padding: 3rem 0;
+    }
+
+    .bmc-card {
+        min-height: 200px;
+        padding: 1.2rem;
+    }
+
+    .bmc-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+
+    .bmc-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .bmc-card h3 {
+        font-size: 1rem;
+    }
+
+    .bmc-list li {
+        font-size: 0.85rem;
+        padding-left: 1.2rem;
+    }
+
+    .bmc-section .section-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a855ff, #4fd1ff);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #c084fc, #38bdf8);
+}
